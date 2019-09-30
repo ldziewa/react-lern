@@ -19,6 +19,6 @@ export default class App extends React.Component {
     }
 
     increasedClickCounter = () => this.setState((prevState) => ({
-        clickCounter: ++prevState.clickCounter
+        clickCounter: prevState.clickCounter + 1
     }))
 }
