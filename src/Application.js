@@ -16,14 +16,12 @@ export default class Application extends React.Component {
         clearInterval(this.timerId);
     }
 
-    tick() {
-        this.setState(({ counter }) => ({ counter: counter + 1 }));
-    }
+    tick = () => this.setState(({ counter }) => ({ counter: counter + 1 }));
 
     changeStateCounter = () => {
         if (this.state.isStarted) {
             clearInterval(this.timerId);
-            this.setState(() => ({ counter: 0 }));
+            this.setState({ counter: 0 });
         } else {
             this.timerId = setInterval(() => this.tick(), 1500);
         }
