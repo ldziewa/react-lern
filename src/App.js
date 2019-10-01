@@ -1,6 +1,8 @@
 import React from 'react';
 import LabelCounter from "./LabelCounter";
 import Button from "./Button";
+import Clock from "./Clock";
+import Application from "./Application";
 
 export default class App extends React.Component {
 
@@ -14,6 +16,8 @@ export default class App extends React.Component {
             <>
                 <LabelCounter clickCounter={ this.state.clickCounter }/>
                 <Button increasedClickCounter={ this.increasedClickCounter }/>
+                <Clock />
+                <Application />
             </>
         );
     }
